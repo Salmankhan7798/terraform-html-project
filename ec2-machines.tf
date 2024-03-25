@@ -4,7 +4,7 @@ resource "aws_instance" "app1" {
   associate_public_ip_address = "true"
   subnet_id                   = "${aws_subnet.PublicAZA.id}"
   vpc_security_group_ids      = ["${aws_security_group.WebServer.id}"]
-  key_name                    = "Master-key"
+  key_name                    = "my-html-project-key"
   tags = {
     Name = "WebApp"
   }
